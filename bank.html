@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baap Er Bank!</title>
+    <!-- Google Font  work sans-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Tailwind CSS Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        // workSans: "'workSans', sans-serif"
+                        workSans: "'Work Sans', sans-serif"
+                    },
+                    // colors: {
+                    //     primary: '#F85559',
+                    //     title: '#121212',
+                    //     'dark-1': 'rgba(18, 18, 18, 0.60)',
+                    //     'dark-2': 'rgba(18, 18, 18, 0.80)'
+                    // }
+                },
+                container: {
+                    center: true,
+                    padding: {
+                        DEFAULT: '1.5rem',
+                        md: '2rem',
+                        lg: '4rem',
+                        xl: '5rem',
+                        '2xl': '6rem'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header class="container">
+        <h1 class="my-4 text-3xl font-semibold text-center lg:my-8 md:text-4xl lg:text-5xl">Let's get some <span
+                class="text-sky-600">Moooooooney</span>
+            !!!
+        </h1>
+
+    </header>
+    <main class="container ">
+        <section class="grid grid-cols-1 gap-5 my-8 lg:my-16 lg:grid-cols-3 md:grid-cols-2">
+            <div class="px-8 py-10 space-y-2 text-white rounded-lg bg-cyan-500">
+                <h2 class="text-2xl font-semibold">Deposit </h2>
+                <h1 class="text-5xl font-semibold">$00</h1>
+            </div>
+            <div class="px-8 py-10 space-y-2 text-white bg-yellow-600 rounded-lg">
+                <h2 class="text-2xl font-semibold">Withdraw</h2>
+                <h1 class="text-5xl font-semibold">$00</h1>
+            </div>
+            <div class="px-8 py-10 space-y-2 text-white bg-green-600 rounded-lg ">
+                <h2 class="text-2xl font-semibold">Balance</h2>
+                <h1 class="text-5xl font-semibold">$1240</h1>
+            </div>
+        </section>
+
+        <section class="grid grid-cols-1 gap-5 lg:grid-cols-2">
+            <div class="p-10 space-y-5 text-white bg-cyan-500 rounded-xl">
+                <h2 class="text-3xl ">Please Deposit</h2>
+                <input type="text" name="" id="deposit" placeholder="$ Amount you want to deposit"
+                    class="block w-full p-2 rounded md:w-9/12">
+                <button id="btn-submit"
+                    class="px-6 py-3 text-[18px] rounded-lg font-semibold text-white bg-violet-600 hover:bg-violet-700">Deposit</button>
+            </div>
+            <div class="p-10 space-y-5 text-white bg-yellow-600 rounded-xl">
+                <h2 class="text-3xl ">Please Withdraw </h2>
+                <input type="text" name="" id="deposit" placeholder="$ Amount you want to Withdraw "
+                    class="block w-full p-2 rounded md:w-9/12">
+                <button id="btn-submit"
+                    class="px-6 py-3 text-[18px] rounded-lg font-semibold text-white bg-violet-600 hover:bg-violet-700">Withdraw
+                </button>
+            </div>
+        </section>
+
+    </main>
+</body>
+
+</html>
