@@ -57,13 +57,15 @@ document.getElementById("btn-deposit").addEventListener(`click`, function () {
 // withdraw part
 document.getElementById("btn-withdraw").addEventListener(`click`, function () {
   const withdrawTotal = getElementTextById("withdraw-total");
-  //   console.log(withdrawTotal);
   const inputAmount = getInputValueById("withdraw-fild");
-  //   console.log(inputAmount);
+  const totalBalance = getElementTextById("balance-total");
+  if (inputAmount > totalBalance) {
+    alert("Baap er bank e ato taka nai!");
+    return;
+  }
   const newWithdrawTotal = withdrawTotal + inputAmount;
   setNewAmount(newWithdrawTotal, "withdraw-total");
 
-  const totalBalance = getElementTextById("balance-total");
   const newTotalBalance = totalBalance - inputAmount;
   setNewAmount(newTotalBalance, "balance-total");
 });
