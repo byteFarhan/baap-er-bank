@@ -31,11 +31,13 @@ function getInputValueById(inputId) {
     alert("Don't try to fun!");
     return 0;
   }
+
   const inputValueNum = parseFloat(inputValue);
-  return inputValueNum;
+  return inputValueNum.toFixed(3);
 }
 function setNewAmount(newTotal, elementToSet) {
   const element = document.getElementById(elementToSet);
+  // const newTotalFixed = newTotal.toFixed(3);
   element.innerText = newTotal;
 }
 // deposit part
@@ -54,6 +56,7 @@ document.getElementById("btn-deposit").addEventListener(`click`, function () {
   //   console.log(totalBalanceElement);
   //   const totalBalanceElement = document.getElementById("balance-total");
   const newBalance = totalBalance + depositInputValue;
+  // const newBalanceFixed = newBalance.toFixed(3);
   setNewAmount(newBalance, "balance-total");
 });
 
